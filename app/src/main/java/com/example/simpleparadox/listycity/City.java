@@ -1,10 +1,10 @@
 package com.example.simpleparadox.listycity;
 
 public class City {
-    private String city;
-    private String province;
+    public String city;
+    public String province;
 
-    City(String city, String province){
+    public City(String city, String province){
         this.city = city;
         this.province = province;
     }
