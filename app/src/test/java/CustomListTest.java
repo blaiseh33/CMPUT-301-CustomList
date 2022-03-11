@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 import com.example.simpleparadox.listycity.City;
 import com.example.simpleparadox.listycity.CustomList;
@@ -22,5 +23,15 @@ public class CustomListTest {
         int listSize = list.getCount();
         list.addCity(new City("Halifax", "NS"));
         assertEquals(list.getCount(), listSize+1);
+    }
+
+    @Test
+    public void hasCityTest(){
+        City city = new City("Edmonton", "AB");
+        assertEquals(1, list.hasCity(city));
+
+        list.addCity(city);
+
+        assertEquals(0, list.hasCity(city));
     }
 }
